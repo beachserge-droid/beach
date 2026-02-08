@@ -4,6 +4,8 @@ import prisma from "@/lib/prisma"
 import { signAdminToken } from "@/lib/adminAuth"
 import { isBlocked, recordAttempt, getClientIP, validateEmail, validateRedirect, sanitizeInput } from "@/lib/security"
 
+export const runtime = "nodejs"
+
 const cookieName = "admin_token"
 
 const parseBody = async (request) => {

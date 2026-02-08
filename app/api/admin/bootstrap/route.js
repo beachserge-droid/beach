@@ -3,6 +3,8 @@ import { NextResponse } from "next/server"
 import prisma from "@/lib/prisma"
 import { sanitizeInput, validateEmail } from "@/lib/security"
 
+export const runtime = "nodejs"
+
 const parseBody = async (request) => {
   const contentType = request.headers.get("content-type") || ""
   if (contentType.includes("application/json")) {
