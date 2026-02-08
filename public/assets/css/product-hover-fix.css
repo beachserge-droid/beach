@@ -1,0 +1,106 @@
+/* Ürün kartları - Teklif Al ve Favori butonları fiyatın ALTINDA */
+
+/* Butonlar container - flex yan yana */
+.tpproduct__actions {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    align-items: center !important;
+    margin-top: 12px !important;
+}
+
+/* Eski hover overlay'i gizle */
+.tpproduct__thumb-bg {
+    display: none !important;
+}
+
+/* Extra specificity: bazı kart varyantlarında main.css daha baskın olabiliyor */
+.tpproduct .tpproduct__thumbitem .tpproduct__thumb-bg,
+.tp-shop-premium .tpproduct__thumbitem .tpproduct__thumb-bg {
+    left: 50% !important;
+    right: auto !important;
+    top: unset !important;
+    bottom: 12px !important;
+    transform: translateX(-50%) !important;
+    width: fit-content !important;
+}
+
+/* Shop sayfası için ekstra güçlü override - main.css'deki kuralları ez */
+.tp-shop-premium .tpproduct__thumb-bg,
+.tp-shop-page .tpproduct__thumb-bg,
+.tp-shop-card .tpproduct__thumb-bg {
+    position: absolute !important;
+    left: 50% !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: 12px !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    width: fit-content !important;
+    text-align: center !important;
+}
+
+/* Shop sayfası thumbitem için özel */
+.tp-shop-premium .tpproduct__thumbitem:hover .tpproduct__thumb-bg,
+.tp-shop-page .tpproduct__thumbitem:hover .tpproduct__thumb-bg {
+    top: auto !important;
+    bottom: 12px !important;
+    transform: translateX(-50%) !important;
+}
+
+.tpproductactionbg {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 30px !important;
+    padding: 8px 16px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Teklif Al butonu stili */
+.tp-shop-card__offer {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 8px 16px !important;
+    background: #fff !important;
+    border: 1px solid #333 !important;
+    border-radius: 20px !important;
+    color: #333 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+}
+
+.tp-shop-card__offer:hover {
+    background: #333 !important;
+    color: #fff !important;
+}
+
+/* Kalp butonu stili */
+.tp-shop-card__wish {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: #fff !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+}
+
+.tp-shop-card__wish:hover {
+    background: #ff0000 !important;
+    border-color: #ff0000 !important;
+    color: #fff !important;
+}
+
+.tp-shop-card__wish:hover i {
+    color: #fff !important;
+}
