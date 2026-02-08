@@ -1,5 +1,5 @@
 -- AlterTable
-ALTER TABLE `category` ADD COLUMN `iconImage` VARCHAR(191) NULL,
+ALTER TABLE `Category` ADD COLUMN `iconImage` VARCHAR(191) NULL,
     ADD COLUMN `sortOrder` INTEGER NOT NULL DEFAULT 0;
 
 -- CreateTable
@@ -91,6 +91,18 @@ CREATE TABLE `Banner` (
     `updatedAt` DATETIME(3) NOT NULL,
 
     INDEX `Banner_bannerGroupId_idx`(`bannerGroupId`),
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
+CREATE TABLE `Product` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `key` VARCHAR(191) NOT NULL,
+    `name` VARCHAR(191) NOT NULL,
+    `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `updatedAt` DATETIME(3) NOT NULL,
+
+    UNIQUE INDEX `Product_key_key`(`key`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
