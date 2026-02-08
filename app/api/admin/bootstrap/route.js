@@ -35,13 +35,19 @@ export async function GET() {
 
 export async function POST(request) {
   try {
+    console.log("Bootstrap POST started")
     const hasAdmin = (await prisma.adminUser.count()) > 0
     if (hasAdmin) {
       return NextResponse.redirect(new URL("/admin/login", request.url))
     }
 
     const requiredKey = process.env.ADMIN_SETUP_KEY
-    const { email, password, setupKey } = await parseBody(request)
+    console.log("Required key:", requiredKey)
+    
+    const body = await parseBody(request)
+    console.log("Parsed body:", { email: body.email, hasPassword: !!body.password, setupKey: body.setupKey })
+    
+    const { email, password, setupKey } = body
 
     const validEmail = validateEmail(email)
     if (!validEmail) {
@@ -66,7 +72,8 @@ export async function POST(request) {
     })
 
     return NextResponse.redirect(new URL("/admin/login", request.url))
-  } catch {
+  } catch (error) {
+    console.error("Bootstrap error:", error)
     return NextResponse.redirect(new URL("/admin/login?setupError=1", request.url))
   }
 }
