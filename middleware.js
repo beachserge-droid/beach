@@ -16,9 +16,9 @@ export async function middleware(request) {
   const isAdminApi = pathname.startsWith("/api/admin")
 
   const isPublicAdminApi =
-    pathname === "/api/admin/login" ||
-    pathname === "/api/admin/bootstrap" ||
-    pathname === "/api/admin/logout"
+    pathname.startsWith("/api/admin/login") ||
+    pathname.startsWith("/api/admin/bootstrap") ||
+    pathname.startsWith("/api/admin/logout")
 
   if (pathname === "/admin/login") return NextResponse.next()
   if (isAdminApi && isPublicAdminApi) return NextResponse.next()
