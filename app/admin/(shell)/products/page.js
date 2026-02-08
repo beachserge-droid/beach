@@ -3,6 +3,9 @@ import prisma from "@/lib/prisma"
 import ImportProductsButton from "@/components/admin/ImportProductsButton"
 import CleanupTestProductsButton from "@/components/admin/CleanupTestProductsButton"
 import DeleteProductButton from "@/components/admin/DeleteProductButton"
+import { Suspense } from "react"
+
+export const dynamic = "force-dynamic"
 
 export default async function AdminProductsPage() {
   const products = await prisma.product.findMany({

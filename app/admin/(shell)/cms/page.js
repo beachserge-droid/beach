@@ -2,6 +2,8 @@ import SeedCmsButton from "@/components/admin/SeedCmsButton"
 import prisma from "@/lib/prisma"
 import Link from "next/link"
 
+export const dynamic = "force-dynamic"
+
 export default async function AdminCmsPage() {
   const [menuCount, sliderCount, bannerGroupCount] = await Promise.all([
     prisma.menu.count(),

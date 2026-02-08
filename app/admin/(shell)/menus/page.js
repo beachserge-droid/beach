@@ -1,6 +1,8 @@
 import Link from "next/link"
 import prisma from "@/lib/prisma"
 
+export const dynamic = "force-dynamic"
+
 export default async function AdminMenusPage() {
   const menus = await prisma.menu.findMany({
     orderBy: { key: "asc" },
