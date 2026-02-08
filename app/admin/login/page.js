@@ -2,14 +2,17 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { useSearchParams } from "next/navigation"
+import { useSearchParams, useRouter } from "next/navigation"
 
 export default function AdminLoginPage() {
   const searchParams = useSearchParams()
+  const router = useRouter()
   const [hasAdmin, setHasAdmin] = useState(false)
   const [dbError, setDbError] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [submitting, setSubmitting] = useState(false)
   const [settings, setSettings] = useState(null)
+  const [loginError, setLoginError] = useState(null)
 
   useEffect(() => {
     const init = async () => {
@@ -18,10 +21,10 @@ export default function AdminLoginPage() {
           fetch("/api/admin/bootstrap"),
           fetch("/api/settings")
         ])
-        
+
         const bootstrapData = await bootstrapRes.json()
         const settingsData = await settingsRes.json()
-        
+
         setHasAdmin(bootstrapData.hasAdmin || false)
         if (settingsData?.ok) {
           setSettings(settingsData.settings)
@@ -36,12 +39,46 @@ export default function AdminLoginPage() {
   }, [])
 
   const next = searchParams?.get("next") || "/admin"
-  const error = searchParams?.get("error")
+  const urlError = searchParams?.get("error")
   const setupError = searchParams?.get("setupError")
 
   // Logo URL - önce settings'ten, yoksa fallback
   const logoUrl = settings?.logoUrl || "/assets/img/logo/logo.png"
   const siteName = settings?.siteName || "RoyalDuş"
+
+  const handleLogin = async (e) => {
+    e.preventDefault()
+    setSubmitting(true)
+    setLoginError(null)
+
+    const formData = new FormData(e.currentTarget)
+    const data = Object.fromEntries(formData)
+
+    try {
+      const res = await fetch("/api/admin/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+
+      const result = await res.json()
+
+      if (res.ok && result.ok) {
+        // Başarılı giriş
+        router.push(result.redirectTo || "/admin")
+        router.refresh()
+      } else {
+        // Hata
+        setLoginError(result.message || "Giriş başarısız.")
+      }
+    } catch (err) {
+      setLoginError("Sunucu hatası oluştu. Lütfen tekrar deneyin.")
+    } finally {
+      setSubmitting(false)
+    }
+  }
 
   if (loading) {
     return (
@@ -96,8 +133,8 @@ export default function AdminLoginPage() {
             border: "3px solid rgba(255, 255, 255, 0.3)",
             overflow: "hidden"
           }}>
-            <img 
-              src={logoUrl} 
+            <img
+              src={logoUrl}
               alt={siteName}
               style={{ maxWidth: "80px", maxHeight: "80px", objectFit: "contain" }}
               onError={(e) => {
@@ -124,7 +161,7 @@ export default function AdminLoginPage() {
 
         {/* Body Section */}
         <div style={{ padding: "32px" }}>
-          {dbError ? (
+          {dbError && (
             <div style={{
               background: "rgba(220, 38, 38, 0.1)",
               border: "1px solid rgba(220, 38, 38, 0.2)",
@@ -136,9 +173,9 @@ export default function AdminLoginPage() {
             }}>
               Veritabanı bağlantısı kurulamadı. Lütfen <code>DATABASE_URL</code> ortam değişkenini kontrol edin.
             </div>
-          ) : null}
+          )}
 
-          {error ? (
+          {(loginError || urlError) && (
             <div style={{
               background: "rgba(239, 68, 68, 0.1)",
               border: "1px solid rgba(239, 68, 68, 0.2)",
@@ -148,14 +185,14 @@ export default function AdminLoginPage() {
               fontSize: "13px",
               color: "#dc2626"
             }}>
-              E-posta veya şifre hatalı.
+              {loginError || "E-posta veya şifre hatalı."}
             </div>
-          ) : null}
+          )}
 
           {/* Login Form */}
-          <form action="/api/admin/login" method="post">
+          <form onSubmit={handleLogin}>
             <input type="hidden" name="next" value={next} />
-            
+
             <div style={{ marginBottom: "20px" }}>
               <label style={{
                 display: "block",
@@ -218,20 +255,21 @@ export default function AdminLoginPage() {
 
             <button
               type="submit"
+              disabled={submitting}
               style={{
                 width: "100%",
                 padding: "16px",
                 fontSize: "15px",
                 fontWeight: "600",
                 color: "white",
-                background: "linear-gradient(135deg, #b91c1c 0%, #dc2626 100%)",
+                background: submitting ? "#9ca3af" : "linear-gradient(135deg, #b91c1c 0%, #dc2626 100%)",
                 border: "none",
                 borderRadius: "14px",
-                cursor: "pointer",
-                boxShadow: "0 4px 14px rgba(220, 38, 38, 0.3)"
+                cursor: submitting ? "not-allowed" : "pointer",
+                boxShadow: submitting ? "none" : "0 4px 14px rgba(220, 38, 38, 0.3)"
               }}
             >
-              Giriş Yap
+              {submitting ? "Giriş Yapılıyor..." : "Giriş Yap"}
             </button>
           </form>
 

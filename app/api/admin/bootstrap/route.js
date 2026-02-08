@@ -44,10 +44,12 @@ export async function POST(request) {
     const requiredKey = process.env.ADMIN_SETUP_KEY
     console.log("Required key:", requiredKey)
     
-    const body = await parseBody(request)
-    console.log("Parsed body:", { email: body.email, hasPassword: !!body.password, setupKey: body.setupKey })
+    const formData = await request.formData()
+    const email = formData.get("email")
+    const password = formData.get("password")
+    const setupKey = formData.get("setupKey")
     
-    const { email, password, setupKey } = body
+    console.log("Parsed body:", { email, hasPassword: !!password, setupKey })
 
     const validEmail = validateEmail(email)
     if (!validEmail) {

@@ -35,39 +35,43 @@ export async function POST(request) {
     // Check if IP is blocked
     if (isBlocked(clientIP)) {
       return NextResponse.json(
-        { ok: false, error: "too_many_requests", message: "Too many login attempts. Please try again later." },
-        { status: 429, headers: { 'Retry-After': '3600' } }
+        { ok: false, error: "too_many_requests", message: "Çok fazla başarısız deneme. Lütfen 1 saat sonra tekrar deneyin." },
+        { status: 429 }
       )
     }
     
-    const { email, password, next } = await parseBody(request)
+    const body = await parseBody(request)
+    const { email, password } = body
     
     // Validate email format
     const validEmail = validateEmail(email)
     if (!validEmail || !password) {
       recordAttempt(clientIP)
-      return NextResponse.redirect(new URL("/admin/login?error=1", request.url))
+      return NextResponse.json({ ok: false, error: "invalid_input", message: "Geçersiz e-posta veya şifre." }, { status: 400 })
     }
 
     const user = await prisma.adminUser.findUnique({ where: { email: validEmail } })
     if (!user) {
       recordAttempt(clientIP)
-      return NextResponse.redirect(new URL("/admin/login?error=1", request.url))
+      // Generic error for security
+      return NextResponse.json({ ok: false, error: "auth_failed", message: "E-posta veya şifre hatalı." }, { status: 401 })
     }
 
     const ok = await bcrypt.compare(String(password), user.passwordHash)
     if (!ok) {
       recordAttempt(clientIP)
-      return NextResponse.redirect(new URL("/admin/login?error=1", request.url))
+      return NextResponse.json({ ok: false, error: "auth_failed", message: "E-posta veya şifre hatalı." }, { status: 401 })
     }
 
     // Successful login - clear attempts
     const token = await signAdminToken({ id: user.id, email: user.email })
     
     // Validate redirect URL to prevent open redirect
-    const redirectTo = validateRedirect(next) || "/admin"
+    const nextPath = body.next || "/admin"
+    const redirectTo = validateRedirect(nextPath) || "/admin"
 
-    const response = NextResponse.redirect(new URL(redirectTo, request.url))
+    const response = NextResponse.json({ ok: true, redirectTo })
+    
     response.cookies.set(cookieName, token, {
       httpOnly: true,
       sameSite: "strict",
@@ -77,7 +81,8 @@ export async function POST(request) {
     })
 
     return response
-  } catch {
-    return NextResponse.redirect(new URL("/admin/login?error=1", request.url))
+  } catch (error) {
+    console.error("Login Error:", error)
+    return NextResponse.json({ ok: false, error: "server_error", message: "Sunucu hatası oluştu." }, { status: 500 })
   }
 }
