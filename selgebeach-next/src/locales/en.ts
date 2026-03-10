@@ -1,0 +1,198 @@
+import { Translations } from './tr';
+
+export const en: Translations = {
+  // Navigation
+  nav_general: "GENERAL",
+  nav_accommodation: "ACCOMMODATION",
+  nav_taste: "DINING",
+  nav_women: "FOR WOMEN",
+  nav_men: "FOR MEN",
+  nav_children: "FOR CHILDREN",
+  nav_honeymoon: "HONEYMOON",
+  nav_activities: "ACTIVITIES",
+  
+  // Dropdowns
+  room_jacuzzi: "Jacuzzi Suite Room",
+  room_deluxe_family: "Deluxe Family Room",
+  room_deluxe: "Deluxe Room",
+  room_std_family: "Standard Family Room",
+  room_std: "Standard Room",
+  dining_main: "Main Restaurant",
+  dining_ala_carte: "A'la Carte",
+  dining_cafes: "Cafes",
+
+  // Topbar
+  online_checkin: "Online Check-in",
+  reservation: "Reservation",
+  call_center: "Call Center",
+  language: "English / İngilizce",
+
+  // Booking Widget
+  check_in: "CHECK-IN",
+  check_out: "CHECK-OUT",
+  adult: "ADULT",
+  child: "CHILD",
+  book_now: "BOOK NOW",
+
+  // Intro Section
+  intro_title1: "Welcome to",
+  intro_title2: "Selge Beach Resort...",
+  intro_p1: "Combining the tranquility of nature with the coolness of the sea, Selge Beach offers a conservative holiday atmosphere designed with respect for spiritual values. A peaceful, joyful, and luxurious holiday experience awaits you in this special corner carefully prepared for families.",
+  intro_p2: "While delighting your palate with exquisite flavors carefully prepared by our chefs, you will enjoy days full of fun activities; feeling right at home, you can experience a holiday full of unforgettable moments.",
+  explore_hotel: "Explore Hotel",
+
+  // Sections
+  sec_announcements: "CONCERTS / ANNOUNCEMENTS",
+  sec_rooms: "ROOMS",
+  sec_rooms_desc: "You can experience a peaceful stay accompanied by unique views in our rooms with different types. Equipped with comfortable and luxurious details, our rooms provide our guests with the opportunity to relax.",
+  sec_dining: "A'la Carte Restaurants",
+  sec_dining_desc: "We offer unique flavors that appeal to every palate in our special a'la carte restaurants that bring our guests together with different tastes. Take your place in our restaurants where the highest quality meats are carefully selected and prepared.",
+  sec_amenities: "AWAITING YOU",
+
+  // Amenities Data
+  amenity_ala_carte: "A'la Carte",
+  amenity_pools: "Pools",
+  amenity_beach: "Beach",
+  amenity_activities: "Activities",
+  amenity_spa: "SPA",
+  amenity_masjid: "Masjid",
+
+  // Footer
+  footer_corporate: "CORPORATE",
+  footer_awards: "AWARDS",
+  footer_socials: "SOCIAL MEDIA",
+  footer_socials_desc: "Follow us for news, events, and exclusive offers.",
+  footer_rights: "© 2024 Selge Beach Resort & Spa | All Rights Reserved.",
+  whatsapp: "WhatsApp",
+  social_media: "SOCIAL MEDIA",
+  social_media_desc: "Follow us for news, events, and exclusive offers.",
+  
+  // Footer Links
+  link_corporate: "Corporate",
+  link_kvkk: "Privacy Policy",
+  link_factsheet: "Fact Sheet",
+  link_sustainability: "Sustainability",
+  link_certs: "Awards & Certificates",
+  link_career: "Career",
+  link_contact: "Contact",
+
+  // Booking Widget & Page
+  booking_search: "SEARCH",
+  booking_summary: "RESERVATION SUMMARY",
+  booking_rooms: "ROOMS",
+  booking_guests: "GUESTS",
+  select_dates_alert: "Please select check-in and check-out dates.",
+  booking_new: "New Reservation",
+  booking_check: "Check Reservation",
+  booking_title: "Reservation",
+  check_in_date: "Check-in Date",
+  check_out_date: "Check-out Date",
+  search: "Search",
+  check_reservation_info: "You can view your previous reservation with your PNR number or contact information.",
+  capacity: "Capacity",
+  person: "Person",
+  total_accommodation_fee: "Total Accommodation Fee",
+  selected: "SELECTED",
+  select: "SELECT",
+  date: "Date",
+  checkout: "checkout",
+  room: "Room",
+  general_total: "General Total",
+  booking_found_rooms_pre: "For your dates,",
+  booking_found_rooms_post: "available rooms found.",
+  
+  // Checkout
+  checkout_back: "GO BACK",
+  checkout_summary: "Order Summary",
+  checkout_check_before: "Please verify your details before proceeding.",
+  checkout_room_type: "Room Type",
+  checkout_guests: "Guests",
+  checkout_amount_to_pay: "Amount to Pay",
+  payment_secure: "Secure Payment",
+  payment_name: "Name",
+  payment_surname: "Surname",
+  payment_email: "Email Address",
+  payment_card: "Card Number",
+  payment_exp: "Expiration Date",
+  payment_cvc: "CVC",
+  payment_button: "PAY & CONFIRM",
+  
+  booking_success_title: "Reservation Confirmed!",
+  booking_success_desc_1: "Dear guest,",
+  booking_success_desc_2: "between dates",
+  booking_success_desc_3: "your reservation has been successfully created. Thank you for choosing us.",
+  booking_home_btn: "Return to Home Page",
+
+  checkout_continue: "Continue to Payment",
+  reservation_summary: "Reservation Summary",
+
+  // New Booking Page Translations
+  booking_dates_label: "Check-in & Check-out Dates",
+  booking_adult_label: "Adult",
+  booking_child_label: "Child (0-12.99 years)",
+  booking_search_btn: "Search",
+  booking_no_rooms: "No available rooms found",
+  booking_select_dates_desc: "Select dates and guest info to view available rooms.",
+  booking_pnr_placeholder: "PNR Number",
+  booking_email_placeholder: "Email address",
+  booking_query_btn: "Query",
+  booking_room_features: "Housekeeping, wake-up service, balcony, electronic key system, tea and coffee set, smoke detector, LED TV, split air conditioning, wireless internet, safe, minibar, carpet, bathroom amenities, makeup mirror, hair dryer, slippers, WC, room service and laundry service...",
+  booking_night: "night",
+  booking_nationality_warn: "TL Prices are only valid for Turkish Citizens",
+  booking_buy_btn: "BUY NOW",
+  booking_continue_btn: "CONTINUE →",
+  booking_inspect_btn: "Inspect",
+
+  // New Checkout Page Translations
+  co_guest_info: "Room Guest Information",
+  co_adult_gender: "Adult {n} Gender *",
+  co_adult_name: "Adult {n} Full Name *",
+  co_child_gender: "Child {n} Gender *",
+  co_child_name: "Child {n} Full Name *",
+  co_gender_male: "Male",
+  co_gender_female: "Female",
+  co_gender_girl: "Girl",
+  co_name_placeholder: "Full Name",
+  
+  co_contact_info: "Reservation Contact Information",
+  co_contact_desc: "Enter the contact information for the person to be contacted regarding your reservation.",
+  co_fullname_req: "Full Name *",
+  co_email_req: "Email *",
+  co_mobile_req: "Mobile Phone *",
+  co_phone_opt: "Landline Phone",
+  co_country_req: "Country *",
+  co_city_req: "City *",
+  co_address_req: "Address *",
+  co_tc_req: "T.R. Identity No *",
+  co_not_tc: "Not a T.R. Citizen",
+
+  co_special_req: "Special Requests",
+  co_req_placeholder: "You can write your special requests here (early check-in, honeymoon, birthday, etc.)",
+  co_req_note: "* Your special requests are not guaranteed, but every effort will be made to accommodate them.",
+
+  co_bank_card: "Bank / Card Selection",
+  co_accepted_cards: "Accepted Cards",
+  co_secure_payment: "Secure Card Payment",
+  co_ssl_secure: "SSL Secure",
+  co_secure_trans: "Secure Transaction",
+  co_card_note: "Your card info is not taken here. It is safely completed with 3D Secure on the payment screen.",
+
+  co_payment_summary: "Payment Summary",
+  co_single_pay: "Single Payment",
+  co_single_pay_desc: "The entire amount is charged at once.",
+  co_3d_info: "Info: The card verification and approval process is carried out by your bank.",
+
+  co_payment_agreement: "Payment & Agreement",
+  co_pay_amount: "Amount to Pay",
+  co_contract1: "Accommodation Contract",
+  co_contract2: "KVKK Information Text",
+  co_read: "Read",
+  co_accept_terms: "I have read the Accommodation Contract and KVKK Information Text, I accept all conditions.",
+  co_proceed_btn: "Proceed to Secure Payment Step",
+  co_order_summary: "Order Summary",
+
+  // Promo Modal
+  promo_title: "Summer Early Booking Special!",
+  promo_desc: "Book your stay for 2 months from now and enjoy Selge Beach privileges with up to 35% discount.",
+  promo_btn: "View Prices",
+};

@@ -1,0 +1,198 @@
+import { Translations } from './tr';
+
+export const ru: Translations = {
+  // Navigation
+  nav_general: "ГЛАВНАЯ",
+  nav_accommodation: "ПРОЖИВАНИЕ",
+  nav_taste: "ПИТАНИЕ",
+  nav_women: "ДЛЯ ЖЕНЩИН",
+  nav_men: "ДЛЯ МУЖЧИН",
+  nav_children: "ДЛЯ ДЕТЕЙ",
+  nav_honeymoon: "МЕДОВЫЙ МЕСЯЦ",
+  nav_activities: "МЕРОПРИЯТИЯ",
+  
+  // Dropdowns
+  room_jacuzzi: "Люкс с джакузи",
+  room_deluxe_family: "Делюкс Семейный",
+  room_deluxe: "Делюкс",
+  room_std_family: "Стандарт Семейный",
+  room_std: "Стандарт",
+  dining_main: "Главный ресторан",
+  dining_ala_carte: "A'la Carte",
+  dining_cafes: "Кафе",
+
+  // Topbar
+  online_checkin: "Онлайн-регистрация",
+  reservation: "Бронирование",
+  call_center: "Колл-центр",
+  language: "Русский",
+
+  // Booking Widget
+  check_in: "ЗАЕЗД",
+  check_out: "ВЫЕЗД",
+  adult: "ВЗРОСЛЫЕ",
+  child: "ДЕТИ",
+  book_now: "ЗАБРОНИРОВАТЬ",
+
+  // Intro Section
+  intro_title1: "Добро пожаловать в",
+  intro_title2: "Selge Beach Resort...",
+  intro_p1: "Selge Beach предлагает атмосферу консервативного отдыха в гармонии с природой и морем. Вас ждет идеальный отдых для всей семьи.",
+  intro_p2: "Наслаждайтесь изысканными блюдами наших поваров и веселыми мероприятиями.",
+  explore_hotel: "Узнать об отеле",
+
+  // Sections
+  sec_announcements: "КОНЦЕРТЫ / СОБЫТИЯ",
+  sec_rooms: "НОМЕРА",
+  sec_rooms_desc: "Уютные номера с уникальным видом и комфортными условиями.",
+  sec_dining: "A'la Carte Рестораны",
+  sec_dining_desc: "Уникальные вкусы для гурманов в наших ресторанах a'la carte.",
+  sec_amenities: "ЧТО ВАС ЖДЕТ",
+
+  // Amenities Data
+  amenity_ala_carte: "A'la Carte",
+  amenity_pools: "Бассейны",
+  amenity_beach: "Пляж",
+  amenity_activities: "Мероприятия",
+  amenity_spa: "СПА",
+  amenity_masjid: "Мечеть",
+
+  // Footer
+  footer_corporate: "О КОМПАНИИ",
+  footer_awards: "НАГРАДЫ",
+  footer_socials: "СОЦСЕТИ",
+  footer_socials_desc: "Следите за новостями и акциями.",
+  footer_rights: "© 2024 Selge Beach Resort & Spa | Все права защищены.",
+  whatsapp: "WhatsApp",
+  social_media: "СОЦСЕТИ",
+  social_media_desc: "Следите за нами.",
+  
+  // Footer Links
+  link_corporate: "О компании",
+  link_kvkk: "Конфиденциальность",
+  link_factsheet: "Инфо для гостей",
+  link_sustainability: "Экологичность",
+  link_certs: "Сертификаты",
+  link_career: "Карьера",
+  link_contact: "Контакты",
+
+  // Booking Widget & Page
+  booking_search: "ИСКАТЬ",
+  booking_summary: "ДЕТАЛИ БРОНИ",
+  booking_rooms: "НОМЕРА",
+  booking_guests: "ГОСТИ",
+  select_dates_alert: "Пожалуйста, выберите даты заезда и выезда.",
+  booking_new: "Новое бронирование",
+  booking_check: "Проверить бронь",
+  booking_title: "Бронирование",
+  check_in_date: "Дата заезда",
+  check_out_date: "Дата выезда",
+  search: "Поиск",
+  check_reservation_info: "Вы можете просмотреть бронь по номеру PNR.",
+  capacity: "Вместимость",
+  person: "Чел.",
+  total_accommodation_fee: "Общая стоимость",
+  selected: "ВЫБРАНО",
+  select: "ВЫБРАТЬ",
+  date: "Дата",
+  checkout: "выезд",
+  room: "Номер",
+  general_total: "Итого",
+  booking_found_rooms_pre: "На ваши даты",
+  booking_found_rooms_post: "найдены свободные номера.",
+  
+  // Checkout
+  checkout_back: "НАЗАД",
+  checkout_summary: "Сводка заказа",
+  checkout_check_before: "Пожалуйста, проверьте данные.",
+  checkout_room_type: "Тип номера",
+  checkout_guests: "Гости",
+  checkout_amount_to_pay: "К оплате",
+  payment_secure: "Безопасная оплата",
+  payment_name: "Имя",
+  payment_surname: "Фамилия",
+  payment_email: "Email",
+  payment_card: "Номер карты",
+  payment_exp: "Срок действия",
+  payment_cvc: "CVC",
+  payment_button: "ОПЛАТИТЬ",
+  
+  booking_success_title: "Бронирование подтверждено!",
+  booking_success_desc_1: "Уважаемый гость,",
+  booking_success_desc_2: "между датами",
+  booking_success_desc_3: "ваше бронирование успешно создано. Спасибо, что выбрали нас.",
+  booking_home_btn: "На главную",
+
+  checkout_continue: "Перейти к оплате",
+  reservation_summary: "Сводка бронирования",
+
+  // New Booking Page Translations
+  booking_dates_label: "Даты заезда и выезда",
+  booking_adult_label: "Взрослые",
+  booking_child_label: "Дети (0-12.99 лет)",
+  booking_search_btn: "Поиск",
+  booking_no_rooms: "Свободных номеров не найдено",
+  booking_select_dates_desc: "Выберите даты и количество гостей.",
+  booking_pnr_placeholder: "Номер PNR",
+  booking_email_placeholder: "Ваш email",
+  booking_query_btn: "Найти",
+  booking_room_features: "Уборка, балкон, электронный ключ, набор для чая/кофе, ТВ, кондиционер, Wi-Fi, сейф, мини-бар, принадлежности для ванной...",
+  booking_night: "ночь",
+  booking_nationality_warn: "Цена в TL действительна только для граждан Турции",
+  booking_buy_btn: "КУПИТЬ",
+  booking_continue_btn: "ДАЛЕЕ →",
+  booking_inspect_btn: "Детали",
+
+  // New Checkout Page Translations
+  co_guest_info: "Информация о гостях",
+  co_adult_gender: "Взрослый {n} Пол *",
+  co_adult_name: "Взрослый {n} ФИО *",
+  co_child_gender: "Ребенок {n} Пол *",
+  co_child_name: "Ребенок {n} ФИО *",
+  co_gender_male: "Муж",
+  co_gender_female: "Жен",
+  co_gender_girl: "Дев",
+  co_name_placeholder: "Ваше имя и фамилия",
+  
+  co_contact_info: "Контактная информация",
+  co_contact_desc: "Введите контакты для связи по поводу брони.",
+  co_fullname_req: "ФИО *",
+  co_email_req: "Email *",
+  co_mobile_req: "Тел *",
+  co_phone_opt: "Доп Тел",
+  co_country_req: "Страна *",
+  co_city_req: "Город *",
+  co_address_req: "Адрес *",
+  co_tc_req: "TC номер *",
+  co_not_tc: "Иностранец",
+
+  co_special_req: "Особые пожелания",
+  co_req_placeholder: "Укажите ваши пожелания...",
+  co_req_note: "* Пожелания не гарантируются, но мы постараемся.",
+
+  co_bank_card: "Оплата картой",
+  co_accepted_cards: "Принимаемые карты",
+  co_secure_payment: "Безопасная оплата",
+  co_ssl_secure: "SSL защита",
+  co_secure_trans: "Защищенная транзакция",
+  co_card_note: "Ваши данные карты будут обработаны через 3D Secure.",
+
+  co_payment_summary: "Сводка оплаты",
+  co_single_pay: "Единовременный платеж",
+  co_single_pay_desc: "Вся сумма списывается сразу.",
+  co_3d_info: "3D-защита от вашего банка.",
+
+  co_payment_agreement: "Договор и оплата",
+  co_pay_amount: "К оплате",
+  co_contract1: "Договор на проживание",
+  co_contract2: "Условия конфиденциальности",
+  co_read: "Читать",
+  co_accept_terms: "Я прочитал и согласен с условиями.",
+  co_proceed_btn: "Перейти к безопасной оплате",
+  co_order_summary: "Итог заказа",
+
+  // Promo Modal
+  promo_title: "Специальное предложение раннего бронирования!",
+  promo_desc: "Забронируйте проживание на 2 месяца вперед и наслаждайтесь привилегиями Selge Beach со скидкой до 35%.",
+  promo_btn: "Посмотреть цены",
+};

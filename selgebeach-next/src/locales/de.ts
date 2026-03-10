@@ -1,0 +1,198 @@
+import { Translations } from './tr';
+
+export const de: Translations = {
+  // Navigation
+  nav_general: "ALLGEMEIN",
+  nav_accommodation: "UNTERKUNFT",
+  nav_taste: "GASTRONOMIE",
+  nav_women: "FÜR FRAUEN",
+  nav_men: "FÜR MÄNNER",
+  nav_children: "FÜR KINDER",
+  nav_honeymoon: "FLITTERWOCHEN",
+  nav_activities: "AKTIVITÄTEN",
+  
+  // Dropdowns
+  room_jacuzzi: "Jacuzzi Suite",
+  room_deluxe_family: "Deluxe Familienzimmer",
+  room_deluxe: "Deluxe Zimmer",
+  room_std_family: "Standard Familienzimmer",
+  room_std: "Standardzimmer",
+  dining_main: "Hauptrestaurant",
+  dining_ala_carte: "A'la Carte",
+  dining_cafes: "Cafés",
+
+  // Topbar
+  online_checkin: "Online Check-in",
+  reservation: "Reservierung",
+  call_center: "Call Center",
+  language: "Deutsch",
+
+  // Booking Widget
+  check_in: "ANREISE",
+  check_out: "ABREISE",
+  adult: "ERWACHSENE",
+  child: "KINDER",
+  book_now: "BUCHEN",
+
+  // Intro Section
+  intro_title1: "Willkommen im",
+  intro_title2: "Selge Beach Resort...",
+  intro_p1: "Selge Beach vereint die Ruhe der Natur mit der Kühle des Meeres und bietet eine familiengerechte Urlaubsatmosphäre. Ein friedlicher und luxuriöser Urlaub erwartet Sie.",
+  intro_p2: "Genießen Sie exquisite Köstlichkeiten, die von unseren Köchen zubereitet werden, und verbringen Sie unterhaltsame Tage mit spannenden Aktivitäten.",
+  explore_hotel: "Hotel Entdecken",
+
+  // Sections
+  sec_announcements: "KONZERTE / ANKÜNDIGUNGEN",
+  sec_rooms: "ZIMMER",
+  sec_rooms_desc: "Erleben Sie einen erholsamen Aufenthalt mit einzigartigen Ausblicken in unseren verschiedenen Zimmertypen.",
+  sec_dining: "A'la Carte Restaurants",
+  sec_dining_desc: "Wir bieten einzigartige Aromen für jeden Geschmack in unseren speziellen A'la Carte Restaurants.",
+  sec_amenities: "WAS SIE ERWARTET",
+
+  // Amenities Data
+  amenity_ala_carte: "A'la Carte",
+  amenity_pools: "Pools",
+  amenity_beach: "Strand",
+  amenity_activities: "Aktivitäten",
+  amenity_spa: "SPA",
+  amenity_masjid: "Moschee",
+
+  // Footer
+  footer_corporate: "UNTERNEHMEN",
+  footer_awards: "AUSZEICHNUNGEN",
+  footer_socials: "SOCIAL MEDIA",
+  footer_socials_desc: "Folgen Sie uns für Neuigkeiten, Events und Angebote.",
+  footer_rights: "© 2024 Selge Beach Resort & Spa | Alle Rechte vorbehalten.",
+  whatsapp: "WhatsApp",
+  social_media: "SOCIAL MEDIA",
+  social_media_desc: "Folgen Sie uns für Neuigkeiten.",
+  
+  // Footer Links
+  link_corporate: "Unternehmen",
+  link_kvkk: "Datenschutz",
+  link_factsheet: "Fact Sheet",
+  link_sustainability: "Nachhaltigkeit",
+  link_certs: "Zertifikate",
+  link_career: "Karriere",
+  link_contact: "Kontakt",
+
+  // Booking Widget & Page
+  booking_search: "SUCHEN",
+  booking_summary: "RESERVIERUNGSÜBERSICHT",
+  booking_rooms: "ZIMMER",
+  booking_guests: "GÄSTE",
+  select_dates_alert: "Bitte wählen Sie An- und Abreisedaten aus.",
+  booking_new: "Neue Reservierung",
+  booking_check: "Reservierung Prüfen",
+  booking_title: "Reservierung",
+  check_in_date: "Anreisedatum",
+  check_out_date: "Abreisedatum",
+  search: "Suchen",
+  check_reservation_info: "Prüfen Sie Ihre vorherige Reservierung mit Ihrer PNR-Nummer.",
+  capacity: "Kapazität",
+  person: "Person(en)",
+  total_accommodation_fee: "Gesamtbetrag",
+  selected: "AUSGEWÄHLT",
+  select: "AUSWÄHLEN",
+  date: "Datum",
+  checkout: "Abreise",
+  room: "Zimmer",
+  general_total: "Gesamtsumme",
+  booking_found_rooms_pre: "Für Ihre Daten,",
+  booking_found_rooms_post: "verfügbare Zimmer gefunden.",
+  
+  // Checkout
+  checkout_back: "ZURÜCK",
+  checkout_summary: "Bestellübersicht",
+  checkout_check_before: "Bitte überprüfen Sie Ihre Daten.",
+  checkout_room_type: "Zimmertyp",
+  checkout_guests: "Gäste",
+  checkout_amount_to_pay: "Zu zahlender Betrag",
+  payment_secure: "Sichere Zahlung",
+  payment_name: "Vorname",
+  payment_surname: "Nachname",
+  payment_email: "E-Mail-Adresse",
+  payment_card: "Kreditkartennummer",
+  payment_exp: "Ablaufdatum",
+  payment_cvc: "CVC",
+  payment_button: "ZAHLEN & BESTÄTIGEN",
+  
+  booking_success_title: "Reservierung bestätigt!",
+  booking_success_desc_1: "Sehr geehrter Gast,",
+  booking_success_desc_2: "zwischen den Daten",
+  booking_success_desc_3: "wurde Ihre Reservierung erfolgreich erstellt. Vielen Dank, dass Sie sich für uns entschieden haben.",
+  booking_home_btn: "Zurück zur Startseite",
+
+  checkout_continue: "Weiter zur Zahlung",
+  reservation_summary: "Reservierungsübersicht",
+
+  // New Booking Page Translations
+  booking_dates_label: "Anreise- & Abreisedatum",
+  booking_adult_label: "Erwachsene",
+  booking_child_label: "Kind (0-12,99 Jahre)",
+  booking_search_btn: "Suchen",
+  booking_no_rooms: "Keine verfügbaren Zimmer gefunden",
+  booking_select_dates_desc: "Wählen Sie Daten und Gäste aus.",
+  booking_pnr_placeholder: "PNR-Nummer",
+  booking_email_placeholder: "E-Mail",
+  booking_query_btn: "Abfragen",
+  booking_room_features: "Reinigungsservice, Weckruf, Balkon, elektronisches Schlüsselsystem, Tee-/Kaffeeset, Fernseher, Klimaanlage, WLAN, Safe, Minibar, Haartrockner, Hausschuhe, Zimmerservice...",
+  booking_night: "Nacht",
+  booking_nationality_warn: "TL-Preise gelten nur für türkische Staatsbürger",
+  booking_buy_btn: "JETZT KAUFEN",
+  booking_continue_btn: "WEITER →",
+  booking_inspect_btn: "Infos",
+
+  // New Checkout Page Translations
+  co_guest_info: "Zimmergastinformationen",
+  co_adult_gender: "Erwachsener {n} Geschlecht *",
+  co_adult_name: "Erwachsener {n} Name *",
+  co_child_gender: "Kind {n} Geschlecht *",
+  co_child_name: "Kind {n} Name *",
+  co_gender_male: "Männlich",
+  co_gender_female: "Weiblich",
+  co_gender_girl: "Mädchen",
+  co_name_placeholder: "Vollständiger Name",
+  
+  co_contact_info: "Kontaktinformationen",
+  co_contact_desc: "Geben Sie die Kontaktdaten für die Reservierung ein.",
+  co_fullname_req: "Vollständiger Name *",
+  co_email_req: "E-Mail *",
+  co_mobile_req: "Mobiltelefon *",
+  co_phone_opt: "Festnetz",
+  co_country_req: "Land *",
+  co_city_req: "Stadt *",
+  co_address_req: "Adresse *",
+  co_tc_req: "T.C. Ausweisnummer *",
+  co_not_tc: "Kein T.C. Bürger",
+
+  co_special_req: "Sonderwünsche",
+  co_req_placeholder: "Sonderwünsche (früher Check-in, Flitterwochen, etc.)",
+  co_req_note: "* Keine Garantie, aber wir bemühen uns, diese zu erfüllen.",
+
+  co_bank_card: "Bank / Kartenauswahl",
+  co_accepted_cards: "Akzeptierte Karten",
+  co_secure_payment: "Sichere Kartenzahlung",
+  co_ssl_secure: "SSL-sicher",
+  co_secure_trans: "Sichere Transaktion",
+  co_card_note: "Kartendaten werden mit 3D-Secure gesichert.",
+
+  co_payment_summary: "Zahlungsübersicht",
+  co_single_pay: "Einmalzahlung",
+  co_single_pay_desc: "Gesamtsumme wird auf einmal abgebucht.",
+  co_3d_info: "3D-Secure wird von Ihrer Bank durchgeführt.",
+
+  co_payment_agreement: "Zahlung & Vereinbarung",
+  co_pay_amount: "Zu zahlender Betrag",
+  co_contract1: "Unterkunftsvertrag",
+  co_contract2: "Datenschutzvereinbarung",
+  co_read: "Lesen",
+  co_accept_terms: "Ich habe gelesen und akzeptiere die Bedingungen.",
+  co_proceed_btn: "Weiter zur Sicheren Zahlung",
+  co_order_summary: "Bestellübersicht",
+
+  // Promo Modal
+  promo_title: "Sommer Frühbucher Angebot!",
+  promo_desc: "Buchen Sie Ihren Aufenthalt für 2 Monate im Voraus und genießen Sie Selge Beach Privilegien mit bis zu 35% Rabatt.",
+  promo_btn: "Preise Anzeigen",
+};
